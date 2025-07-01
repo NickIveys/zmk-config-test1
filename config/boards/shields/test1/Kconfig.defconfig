@@ -1,6 +1,18 @@
-if SHIELD_TEST1
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_TM470
 
 config ZMK_KEYBOARD_NAME
     default "test1"
+
+config ZMK_MOUSE
+    default y
+
+config ADC
+    default y
+
+config ADC_NRFX_SAADC
+    default y
 
 endif

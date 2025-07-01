@@ -12,10 +12,12 @@
     keymap {
         compatible = "zmk,keymap";
 
+        rows = <1>;
+        cols = <2>;
+
         default_layer {
             bindings = <
-                &kp X
-                &kp Z
+                &kp X &kp Z
             >;
         };
     };
