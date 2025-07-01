@@ -6,18 +6,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
-    # START #####
-    - name: badjeff
-      url-base: https://github.com/badjeff
-    # END #######
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    # START #####
-    - name: zmk-analog-input-driver
-      remote: badjeff
-      revision: main
-    # END #######
+
   self:
     path: config
