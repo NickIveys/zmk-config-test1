@@ -1,14 +1,20 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 /* Reference: https://docs.zephyrproject.org/apidoc/latest/group__input__events.html */
 
-&kscan {
-    compatible = "zmk,kscan-matrix";
+/ {
+    chosen {
+        zmk, kscan = &default_kscan;
+    };
 
-    row-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;  /* one row */
-    col-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>, <&gpio0 12 GPIO_ACTIVE_LOW>;  /* two columns */
-};
+    default_kscan: kscan {
+        compatible = "zmk, kscan-gpio-direct";
+        label = "default_kscan";
 
-
+        input-gpios =
+            <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    };
+}
 &adc {
 	status = "okay";
 };
