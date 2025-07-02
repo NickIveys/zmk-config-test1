@@ -45,8 +45,8 @@
 			mv-mid = <1690>;
 			mv-min-max = <1600>;
 			mv-deadzone = <80>;
-			scale-multiplier = <3>;
-			scale-divisor = <12>;
+			scale-multiplier = <1>;
+			scale-divisor = <210>;
 			invert;
 			evt-type = <INPUT_EV_REL>;
 			input-code = <INPUT_REL_Y>;
