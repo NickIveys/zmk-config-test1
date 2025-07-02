@@ -8,12 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+&analog_input_0 {
+    bindings = <&mouse_move>;
+};
+
 / {
     keymap {
-        &analog_input_0 {
-            bindings = <&mouse_move>;
-        };
-
         compatible = "zmk,keymap";
         
 
