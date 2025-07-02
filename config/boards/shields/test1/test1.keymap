@@ -10,7 +10,12 @@
 
 / {
     keymap {
+        &analog_input_0 {
+            bindings = <&mouse_move>;
+        };
+
         compatible = "zmk,keymap";
+        
 
         default_layer {
             bindings = <
