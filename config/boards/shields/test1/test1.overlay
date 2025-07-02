@@ -33,21 +33,21 @@
 		sampling-hz = <100>;
 		x-ch {
 			io-channels = <&adc 0>; // <--- see ain-map.png for nRF52840
-			mv-mid = <1680>;         // Center voltage (neutral joystick position)
+			mv-mid = <1690>;         // Center voltage (neutral joystick position)
     		mv-min-max = <1600>;     // Range around center considered valid
-    		mv-deadzone = <90>;      // Ignore values ±10 mV around mv-mid
+    		mv-deadzone = <80>;      // Ignore values ±10 mV around mv-mid
 			scale-multiplier = <1>;
-			scale-divisor = <5>;  // Scale to HID step size
+			scale-divisor = <4>;  // Scale to HID step size
 			invert;
 			evt-type = <INPUT_EV_REL>; // Relative movement (like mouse)
 			input-code = <INPUT_REL_X>; // Horizontal axis (X)
 		};
 		y-ch {
 			io-channels = <&adc 5>; // <--- see ain-map.png for nRF52840
-			mv-mid = <1630>;
-			mv-min-max = <1680>;
-			mv-deadzone = <90>;
-			scale-multiplier = <3>;
+			mv-mid = <1690>;
+			mv-min-max = <1600>;
+			mv-deadzone = <80>;
+			scale-multiplier = <1>;
 			scale-divisor = <4>;
 			invert;
 			evt-type = <INPUT_EV_REL>;
