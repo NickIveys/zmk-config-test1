@@ -35,8 +35,8 @@
     		mv-min-max = <1600>;     // Range around center considered valid
     		mv-deadzone = <80>;      // Ignore values ±10 mV around mv-mid
 			scale-multiplier = <1>;
-			scale-divisor = <4>;  // Scale to HID step size
-			invert;
+			scale-divisor = <400>;  // Scale to HID step size
+
 			evt-type = <INPUT_EV_REL>; // Relative movement (like mouse)
 			input-code = <INPUT_REL_X>; // Horizontal axis (X)
 		};
@@ -46,7 +46,7 @@
 			mv-min-max = <1600>;
 			mv-deadzone = <80>;
 			scale-multiplier = <1>;
-			scale-divisor = <4>;
+			scale-divisor = <400>;
 			invert;
 			evt-type = <INPUT_EV_REL>;
 			input-code = <INPUT_REL_Y>;
