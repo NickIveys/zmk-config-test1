@@ -22,8 +22,6 @@
     default_mouse: mouse {
         compatible = "zmk,input-listener";
         device = <&anin0>;
-		x-invert;
-		y-invert;
         
     };
 
