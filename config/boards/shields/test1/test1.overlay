@@ -18,14 +18,11 @@
             <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 
-	// start claude ADD THIS MOUSE CONFIGURATION
+	// MOUSE CONFIGURATION - Try this simpler version first
     default_mouse: mouse {
-        compatible = "zmk,mouse";
-        label = "default_mouse";
+        compatible = "zmk,input-behavior-listener";
+        device = <&anin0>;
         
-        // Link the analog input to the mouse
-        input-devices = <&anin0>;
-    // end claude
     };
 
 	anin0: analog_input_0 {
