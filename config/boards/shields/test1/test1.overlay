@@ -33,7 +33,7 @@
 			io-channels = <&adc 0>; // <--- see ain-map.png for nRF52840
 			mv-mid = <1630>;         // Center voltage (neutral joystick position)
     		mv-min-max = <1600>;     // Range around center considered valid
-    		mv-deadzone = <100>;      // Ignore values ±10 mV around mv-mid
+    		mv-deadzone = <200>;      // Ignore values ±10 mV around mv-mid
 			scale-multiplier = <1>;
 			scale-divisor = <70>;  // Scale to HID step size
 			invert;  // Flip direction
@@ -44,7 +44,7 @@
 			io-channels = <&adc 5>; // <--- see ain-map.png for nRF52840
 			mv-mid = <1630>;
 			mv-min-max = <1600>;
-			mv-deadzone = <10>;
+			mv-deadzone = <200>;
 			scale-multiplier = <3>;
 			scale-divisor = <4>;
 			invert;
