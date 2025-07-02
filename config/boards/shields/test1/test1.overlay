@@ -20,6 +20,7 @@
 
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
+		label = "analog_input_0";  // <--- REQUIRED
 		sampling-hz = <100>;
 		x-ch {
 			io-channels = <&adc 0>; // <--- see ain-map.png for nRF52840
