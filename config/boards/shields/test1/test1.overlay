@@ -18,19 +18,19 @@
             <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 
-	// ADD THIS MOUSE CONFIGURATION
+	// start claude ADD THIS MOUSE CONFIGURATION
     default_mouse: mouse {
         compatible = "zmk,mouse";
         label = "default_mouse";
         
         // Link the analog input to the mouse
         input-devices = <&anin0>;
-        
+    // end claude
     };
 
 	anin0: analog_input_0 {
 		compatible = "zmk,analog-input";
-		label = "analog_input_0";  // <--- REQUIRED
+
 		sampling-hz = <100>;
 		x-ch {
 			io-channels = <&adc 0>; // <--- see ain-map.png for nRF52840
