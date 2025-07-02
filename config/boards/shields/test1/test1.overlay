@@ -20,7 +20,7 @@
 
 	// MOUSE CONFIGURATION - Try this simpler version first
     default_mouse: mouse {
-        compatible = "zmk,input-behavior-listener";
+        compatible = "zmk,input-listener";
         device = <&anin0>;
         
     };
